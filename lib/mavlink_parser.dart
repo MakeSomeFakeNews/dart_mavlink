@@ -209,8 +209,7 @@ class MavlinkParser {
   bool _addMavlinkFrameToStream() {
     // check CRC bytes.
     if (!_checkCRC()) {
-      // The MAVLink packet is a bad CRC.
-      // Ignore the MAVLink packet.
+      print('crc check error _messageId = $_messageId');
       return false;
     }
 
